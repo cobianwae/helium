@@ -1,0 +1,93 @@
+.hidden-area{
+	display: none;
+}
+.submit-holder{
+	text-align: right !important;
+}
+
+#row .value{display: none;}
+#row > h4 + table tr td{
+	text-align: center;
+	cursor: pointer;
+}
+.column-settings > tbody >  tr > th{vertical-align: top;padding-top:5px;}
+#row .bg{
+	width: 70px;
+	height: 31px;
+	display: block;
+	margin: 0 auto;
+	background-position: 50% 2px;
+	background-repeat: no-repeat;
+	padding: 0px 0;
+	text-align: center;
+	vertical-align: top;
+	background-image: url(../images/columns.jpg);
+	margin-top:10px;
+}
+#row .c-2 .bg{
+	background-position: 50% -29px;
+}
+#row .c-3 .bg{
+	background-position: 50% -58px;
+}
+#row .c-4 .bg{
+	background-position: 50% -87px;
+}
+#row .c-2-3 .bg{
+	background-position: 50% -116px;
+}
+#row .c-3-2 .bg{
+	background-position: 50% -116px;
+	-moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+#row .choosen {
+	background-color: #ddd;
+}
+
+.icon-option i{
+	margin-right: 1px;
+	margin-bottom: 1px;
+	text-align: center;
+	vertical-align: center;
+	font-size: 15px;
+	height: 33px;
+	cursor: pointer;
+	line-height: 33px;
+	width: 33px;
+	border: 1px solid #e9e9e9;
+	background-color: #ebebeb;
+	display: inline-block;
+}
+.icon-option i:hover {
+	position: relative;
+	z-index: 200;
+	transform: scale(1.8);
+	-moz-transform: scale(1.8);
+	-o-transform: scale(1.8);
+	-webkit-transform: scale(1.8);
+	box-shadow: 0px 0px 6px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0px 0px 6px rgba(0,0,0,0.3);
+	-o-box-shadow: 0px 0px 6px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0px 0px 6px rgba(0,0,0,0.3);
+}
+
+#general-icon{
+	display: block;
+}
+#web-apps-icon{
+	display: none;
+}
+i.selected{
+	background-color: #ccc;
+}
+.dropcap {
+    float: left;
+    font-size: 80px;
+    padding-right: 7px;
+    line-height: 72px;
+}
