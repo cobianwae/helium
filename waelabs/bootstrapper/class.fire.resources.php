@@ -32,7 +32,7 @@
 				wp_register_style( 'font-awesome', WAE_BASE_URL.'css/font-awesome.min.css' );
 				wp_register_style( 'mediaplayer', WAE_BASE_URL.'css/mediaelement/mediaelementplayer.min.css');
 				wp_enqueue_style( 'popup', WAE_BASE_URL.'css/magnific-popup.css');
-				wp_enqueue_style( 'velavo', get_stylesheet_uri(), array('foundation', 'font-awesome', 'flexslider', 'mediaplayer') );
+				wp_enqueue_style( 'helium', get_stylesheet_uri(), array('foundation', 'font-awesome', 'flexslider', 'mediaplayer') );
 			}
 		}
 
@@ -44,7 +44,7 @@
 		function load_scripts(){
 			if(!is_admin()){
 				global $need_scripts;
-				wp_enqueue_script( 'velavo', WAE_BASE_URL. 'js/velavo.js', $need_scripts, null, $in_footer = true );
+				wp_enqueue_script( 'helium', WAE_BASE_URL. 'js/helium.js', $need_scripts, null, $in_footer = true );
 			}
 		}
 

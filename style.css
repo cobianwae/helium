@@ -1,0 +1,45 @@
+/*
+	Theme Name: Helium
+	Theme URI: http://helium-waelabs.rhcloud.com
+	Author: Decode
+    Author URI: http//decode.com
+	Description: Creative Multipurpose Wordpress Theme
+    Tags: two-columns, dark, light, featured-images, rtl-language-support, responsive-layout
+	Version: 1.0
+	License: GNU General Public License version 3.0
+	License URI: http://www.gnu.org/licenses/gpl-3.0.html
+*/
+
+.title-area .name{
+	line-height: 45px;
+}
+
+.fullscreen-slider-enabled{
+	margin-top: -91px;
+}
+
+@media only screen and (min-width: 40.063em){
+	.contain-to-grid .top-bar,
+	.contain-to-grid > .title-area {
+	max-width: 62.5em;
+	margin: 0 auto;
+	margin-bottom: 0;
+	}
+	.contain-to-grid > .title-area{
+		text-align: center;
+	}
+	.top-bar.center{
+		height: auto;
+	}
+	.top-bar.center .title-area {
+		float: none;
+		text-align: center;
+	}
+	.top-bar.center .top-bar-section {
+		text-align: center;
+	}
+	.top-bar.center .top-bar-section > ul >li{
+		float: none;
+		display: inline-block;
+	}
+}

@@ -3,27 +3,28 @@
 	* Fires the theme : constants definition, core classes loading
 	*
 	* 
-	* @package      Fluid
+	* @package      Helium
 	* @subpackage   classes
 	* @since        1.0
 	* @author       Waelabs <wae.asu.labs@gmail.com>
 	* @copyright    Copyright (c) 2014, Waelabs
-	* @link         http://waelabs.com/fluid
+	* @link         http://waelabs.com/helium
 	* @license      http://www.gnu.org/licenses/gpl-3.0.html
 	*/
 	
 	require_once( dirname(__FILE__). '/waelabs/functions.php' );
- 	class Fluid extends WAE {
+ 	class Helium extends WAE {
 		
 		function __construct(){
 			parent::__construct();
 			$this->add_images_size();
+			add_action( 'vc_before_init', array( $this, 'vc_as_theme' ) );
 		}
 
 		function define_config(){
 			$config = array(
-				'class-prefix' => 'FL_',
-				'admin-class' => 'fluid_admin_config',
+				'class-prefix' => 'HL_',
+				'admin-class' => 'helium_admin_config',
 				'include-widgets' => array(
 					'about',
 					'popular_posts',
@@ -39,7 +40,9 @@
 					'shortcodes',
 					'post_format',
 					'tinymce_dialog',
-					'page_options'			
+					'page_options',
+					'slider',
+					'visual_composer'			
 				),
 				'include-parts' => array(
 					'header',
@@ -48,13 +51,13 @@
 					'comment',
 					'social'
 				),
-				'global-options' => 'fluid'
+				'global-options' => 'helium'
 			);
 			$this->config = array_merge( $this->config, $config );
 		}
 
 		function load_parts(){
-			
+			$this->instantiate(array('parts','header','main'));
 		}
 
 		function add_images_size(){
@@ -62,6 +65,10 @@
 			add_image_size( 'main-thumbnail', 600);
 		}
 
+		function vc_as_theme(){
+			vc_set_as_theme();
+		}
+
 	}
 
-	new Fluid;
+	new Helium;

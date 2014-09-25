@@ -1,6 +1,6 @@
 <?php
 
-$redux_opt_name = "fluid";
+$redux_opt_name = "helium";
 
 // Place any extra hooks/configs in here for extensions and 
 // place the actual extension within the /extensions dir

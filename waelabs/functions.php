@@ -35,10 +35,10 @@
 			add_filter('the_content', array( $this, 'shortcode_empty_paragraph_fix' ) );
 		}
 
-	    protected  function load_modules(){
+	    function load_modules(){
 
 	    }
-	    protected  function load_widgets(){
+	    function load_widgets(){
 
 	    }
 	    
