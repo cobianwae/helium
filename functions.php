@@ -19,6 +19,7 @@
 			parent::__construct();
 			$this->add_images_size();
 			add_action( 'vc_before_init', array( $this, 'vc_as_theme' ) );
+			// add_action( 'init', array($this, 'vc_row_extend') );
 		}
 
 		function define_config(){
@@ -68,6 +69,12 @@
 		function vc_as_theme(){
 			vc_set_as_theme();
 		}
+
+		// function vc_row_extend(){
+		// 	$vc_row = WPBMap::getShortCode('vc_column');
+		// 	// var_dump($vc_row);
+		// 	// exit;
+		// }
 
 	}
 

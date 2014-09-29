@@ -7,31 +7,31 @@
 		function fullwidth_dialog(){
 			vc_map(array(
 				'name' => __('Fullwidth Section', THEMENAME),
-				'base' => 'wae_fullwidth_section',
+				'base' => 'fullwidth_section',
 				'class' => '',
+				'is_container' => true,
+			   	'content_element' => true,
+			   	'js_view' => 'VcColumnView',
 				'category' => __('Content', THEMENAME),
 				'params' => array(
 					array(
 						'type' => 'colorpicker',
-						'holder' => 'div',
 						'class' => '',
 						'heading' => __('Background Color', THEMENAME),
-						'param_name' => 'backgroud_color',
+						'param_name' => 'background_color',
 						'value' => '',
 						'description' => __('Pick the color for you background', THEMENAME)
 					),
 					array(
 						'type' => 'attach_image',
-						'holder' => 'div',
 						'class' => '',
 						'heading' => __('Background Image', THEMENAME),
-						'param_name' => 'backgroud_image',
+						'param_name' => 'background_image',
 						'value' => '',
 						'description' => __('Upload an image for you background', THEMENAME)
 					),
 					array(
 						'type' => 'textfield',
-						'holder' => 'div',
 						'class' => '',
 						'heading' => __('Padding Top', THEMENAME),
 						'param_name' => 'padding_top',
@@ -40,6 +40,12 @@
 					)
 				)
 			));
+			
 		}
 	}
+	// Your "container" content element should extend WPBakeryShortCodesContainer class to inherit all required functionality
+			if ( class_exists( 'WPBakeryShortCodesContainer' ) ) {
+			    class WPBakeryShortCode_Fullwidth_Section extends WPBakeryShortCodesContainer {
+			    }
+			}
 ?>
