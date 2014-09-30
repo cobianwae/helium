@@ -221,7 +221,11 @@
 		padding: 0 8px;
 	}
 
-	
+	.top-bar-section li.active:not(.has-form) a:not(.button):hover {
+		color: #009688;
+	}
+
+
 	/* END OF UBER MENU */
 
 	
