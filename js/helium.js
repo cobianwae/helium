@@ -57,18 +57,20 @@
             effect : 'crossfading',
             pauseOnHover : true
         });
-		/* UBER MENU */		
-		var liHeight = 0
-        $('li.mega-menu > ul.dropdown > li').each(function(idx, val){          
-          if($(this).height() > liHeight){
-            liHeight = $(this).height();
-          }
-        });
+		if(Modernizr.mq('(min-width: 40.063em)')){
+	   /* UBER MENU */  
+	   var liHeight = 0
+	         $('li.mega-menu > ul.dropdown > li').each(function(idx, val){          
+	           if($(this).height() > liHeight){
+	             liHeight = $(this).height();
+	           }
+	         });
 
-        $('li.mega-menu > ul.dropdown > li').each(function(idx, val){          
-          $(this).height(liHeight);          
-        });
-        /* END OF UBER MENU */
+	         $('li.mega-menu > ul.dropdown > li').each(function(idx, val){          
+	           $(this).height(liHeight);          
+	         }); 
+	         /* END OF UBER MENU */
+	  }
 	});
 	$(document).foundation();
 }(jQuery, window));

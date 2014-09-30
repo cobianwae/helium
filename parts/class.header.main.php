@@ -39,16 +39,9 @@
 				    	<li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
 				    </ul>
 				    <section class="top-bar-section">
-			    		<nav>
-		    				<ul>
-								<?php do_action( 'wae_menu', 'primary', $menu_side) ?>
-							</ul>
-						</nav>
+						<?php do_action( 'wae_menu', 'primary', $menu_side) ?>
 					</section>
 				</nav>
-			</div>
-
-			<div class="contain-to-grid full-screen wrapper-header-background" style="background-image:url(<?php bloginfo('template_directory'); ?>/images/5-copy.jpg)">
 			</div>
 			<?php
 		}
