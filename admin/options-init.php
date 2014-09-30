@@ -255,7 +255,20 @@ if (!class_exists('helium_admin_config')) {
                                 '2' => 'Right Menu',
                                 '3' => 'Centered Menu'
                             )
+                        ),
+                    'fields' =>  array(
+                            'id' => 'hover_type',
+                            'type' => 'radio',
+                            'title' => 'Hover Type',
+                            'subtitle' => 'Choose your prefered hover type',
+                            'default' => '1',
+                            'options' => array(
+                                '1' => 'Icon 1',
+                                '2' => 'Icon 2',
+                                '3' => 'ICon 3'
+                            )
                         )
+
                     )
                 );
 
@@ -343,7 +356,7 @@ if (!class_exists('helium_admin_config')) {
                 'page_parent_post_type' => 'your_post_type',
                 'customizer' => true,
                 'default_mark' => '*',
-                'google_api_key' => 'AIzaSyC_5fmPG5ZYI3IhpQQwrzaaddBGcXPRYE0',
+                /*'google_api_key' => 'AIzaSyC_5fmPG5ZYI3IhpQQwrzaaddBGcXPRYE0',*/
                 'hints' => 
                 array(
                   'icon' => 'el-icon-question-sign',
