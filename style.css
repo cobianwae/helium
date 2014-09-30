@@ -10,6 +10,36 @@
 	License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */
 
+@font-face {
+    font-family: 'raleway';
+    src: url('fonts/raleway/raleway-regular-webfont.eot');
+    src: url('fonts/raleway/raleway-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/raleway/raleway-regular-webfont.woff') format('woff'),
+         url('fonts/raleway/raleway-regular-webfont.ttf') format('truetype'),
+         url('fonts/raleway/raleway-regular-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'raleway';
+    src: url('fonts/raleway/raleway-bold-webfont.eot');
+    src: url('fonts/raleway/raleway-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/raleway/raleway-bold-webfont.woff') format('woff'),
+         url('fonts/raleway/raleway-bold-webfont.ttf') format('truetype'),
+         url('fonts/raleway/raleway-bold-webfont.svg') format('svg');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'ralewaymedium';
+    src: url('fonts/raleway/raleway-medium-webfont.eot');
+    src: url('fonts/raleway/raleway-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/raleway/raleway-medium-webfont.woff') format('woff'),
+         url('fonts/raleway/raleway-medium-webfont.ttf') format('truetype'),
+         url('fonts/raleway/raleway-medium-webfont.svg') format('svg');
+}
+
 .title-area .name{
 	line-height: 45px;
 }
@@ -296,4 +326,157 @@ html,body{
 		float: none;
 		display: inline-block;
 	}
+
+	/*UBER MENU*/
+	.top-bar-section li.mega-menu {	
+		position: initial;
+	}
+
+	.mega-menu > .dropdown .has-dropdown.hover>.dropdown, .mega-menu > .dropdown .has-dropdown.not-click:hover>.dropdown,
+	.mega-menu > .dropdown .dropdown  {
+		position: relative !important;
+	 	left: auto !important;	 	
+ 	}
+
+	li.mega-menu.columns-2 > ul > li {
+		width: 50%;			
+	}
+
+	li.mega-menu.columns-3 > ul > li {
+		width: 33.3%;			
+	}
+
+	li.mega-menu.columns-4 > ul > li {
+		width: 25%;			
+	}
+
+	.top-bar-section .mega-menu.has-dropdown > .dropdown li.has-dropdown>a:after {
+		content: "";
+	}
+
+	.wrapper-nav {
+		height: 100px;
+		/*background: transparent;*/
+	}
+
+	/*.dropdown a {
+		line-height: 100px;
+		height: 100px;
+	}*/
+
+	.mega-menu > a {
+		position: relative;				
+	}
+
+	#menu-primary > li > a {
+		line-height: 100px;
+		height: 100px;
+		background: transparent;
+		font-size: 16px;
+	}
+
+	.top-bar-section ul li {
+		background: transparent;	
+	}
+
+	.top-bar-section .has-dropdown>a:after {
+		top: 50px;
+	}
+
+	.contain-to-grid.full-screen {
+		height: 100%;
+		/*TODO : ini remove aja entar;*/
+		background-size: 1344px 800px;
+	}
+
+	.wrapper-nav .top-bar {
+		height: 100px;
+	}
+
+	.title-area.right > li.name > a {
+		line-height: 100px;
+		height: 100px;
+		display: inline-block;
+	}
+
+	.contain-to-grid.full-screen {
+		margin-top: -100px;
+	}
+
+	.top-bar {
+		background: transparent;
+	}
+
+	.top-bar-section ul li > a {
+		text-transform: uppercase;	
+		
+		color: #f5f5f5;		
+	}
+
+	.top-bar-section ul li:hover:not(.has-form)>a {
+		color: #009688;			
+	}
+
+	.top-bar-section .dropdown li:not(.has-form) a:not(.button){
+		background: #f5f5f5;
+		color: #757575;
+	}
+
+
+	.top-bar-section .dropdown li:not(.has-form):hover>a:not(.button) {
+		color: #009688;
+		background-color: #f5f5f5;				
+	}
+
+	.top-bar-section .dropdown li:not(.has-form):hover>a:not(.button) {
+
+	}
+
+	.top-bar-section .mega-menu .right li .dropdown li .dropdown {
+		right: 0;
+	}
+
+	li.mega-menu > ul.dropdown > li { 
+		/*border-right: 1px solid #009688;*/
+		background: #f5f5f5;
+		padding-top: 25px;
+		padding-left: 20px;
+		padding-bottom: 25px;
+		padding-right: 20px;
+		position: relative;
+		/*margin-top: 44px;*/
+	}
+
+	li.mega-menu > ul.dropdown > li:after {
+		height: 100%;
+		width: 1px;
+		background-color: #009688;
+		position: absolute;
+		right: 0;
+		content: "";
+		top: 0;
+		border-top: 20px solid #f5f5f5;
+		border-bottom: 20px solid #f5f5f5;
+	} 
+	li.mega-menu > ul.dropdown > li:last-child:after {
+		display: none;
+	}
+
+	.top-bar-section li.active:not(.has-form) a:not(.button) {
+		padding: 0 30px;
+	}
+	
+	.top-bar-section ul li>a {		
+		font-size: 12px;
+		font-family: ralewaymedium;
+	}
+
+	.top-bar-section .has-dropdown.hover>.dropdown, .top-bar-section .has-dropdown.not-click:hover>.dropdown {
+		padding: 0 8px;
+	}
+
+	
+	/* END OF UBER MENU */
+
+	
 }
