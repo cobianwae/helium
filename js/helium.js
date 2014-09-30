@@ -50,7 +50,13 @@
 	};
 	var velavo = {};;
 	$(document).ready(function(){
-		
+		 $('.videofit').videofit({
+		 	container : '.wae-slider'
+		 });
+		 $('.wae-slider').waeslider({
+            effect : 'crossfading',
+            pauseOnHover : true
+        });
 	});
 	$(document).foundation();
 }(jQuery, window));

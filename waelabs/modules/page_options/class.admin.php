@@ -45,7 +45,7 @@
 				</tr>
 				<tr>
 					<th>
-						<label for="wae_header_caption_title"><?php _e( 'Caption Title', THEMENAME )?></label>
+						<label for="wae_header_caption_title"><?php _e( 'Title', THEMENAME )?></label>
 					</th>
 					<td>
 						<input type="text" class="widefat" name="wae_header_caption_title" id="wae_header_caption_title" value="<?php echo $header_caption_title  ?>" />
@@ -53,7 +53,7 @@
 				</tr>
 				<tr>
 					<th>
-						<label for="wae_header_caption_subtitle"><?php _e( 'Caption Subtitle', THEMENAME )?></label>
+						<label for="wae_header_caption_subtitle"><?php _e( 'Subtitle', THEMENAME )?></label>
 					</th>
 					<td>
 						<textarea rows="4" class="widefat" name="wae_header_caption_subtitle" ><?php echo $header_caption_subtitle  ?></textarea>
@@ -61,7 +61,7 @@
 				</tr>
 				<tr>
         			<th>
-        				<label for="wae_header_caption_color"><?php _e( 'Caption Color', THEMENAME )?></label>
+        				<label for="wae_header_caption_color"><?php _e( 'Font Color', THEMENAME )?></label>
         			</th>
         			<td>
         				<input  type="radio" name="wae_header_caption_color" value="light" <?php echo checked($header_caption_color, "light") ?> /> Light <br/>
@@ -70,7 +70,7 @@
         		</tr>
         		<tr>
         			<th>
-        				<label for="wae_header_caption_align"><?php _e( 'Caption Align', THEMENAME )?></label>
+        				<label for="wae_header_caption_align"><?php _e( 'Aligntment', THEMENAME )?></label>
         			</th>
         			<td>
         				<input  type="radio" name="wae_header_caption_align" value="left" <?php echo checked($header_caption_align, "left") ?> /> <?php _e('Left', THEMENAME) ?> <br/>

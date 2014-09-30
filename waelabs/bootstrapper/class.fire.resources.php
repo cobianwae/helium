@@ -22,6 +22,9 @@
 				wp_register_script( 'classie', WAE_BASE_URL . 'js/classie.js', array( 'jquery'));
 				wp_register_script( 'animonscroll', WAE_BASE_URL . 'js/AnimOnScroll.js', array( 'jquery'));
 				wp_register_script( 'flexslider', WAE_BASE_URL . 'js/jquery.flexslider-min.js',array( 'jquery', 'imagesloaded'));
+				wp_register_script( 'waeslider', WAE_BASE_URL . 'js/wae-slider.js',array( 'jquery' ));
+				wp_register_script( 'videofit', WAE_BASE_URL . 'js/videofit.js',array( 'jquery' ));
+			
 			}
 		}
 

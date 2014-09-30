@@ -28,7 +28,7 @@
 
 		function menu_on_side($menu_side, $logo_side){
 			?>
-			<div class="contain-to-grid">
+			<div class="contain-to-grid header-container">
 				<nav class="top-bar" data-topbar>
 					<ul class="title-area <?php echo $logo_side?>">
 				    	<li class="name">
@@ -46,7 +46,7 @@
 
 		function menu_on_center(){
 			?>
-			<div class="contain-to-grid">
+			<div class="contain-to-grid header-container">
 				<nav class="top-bar center" data-topbar>
 						<ul class="title-area">
 						    	<li class="name">

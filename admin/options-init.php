@@ -343,6 +343,7 @@ if (!class_exists('helium_admin_config')) {
                 'page_parent_post_type' => 'your_post_type',
                 'customizer' => true,
                 'default_mark' => '*',
+                'google' => true,
                 'google_api_key' => 'AIzaSyC_5fmPG5ZYI3IhpQQwrzaaddBGcXPRYE0',
                 'hints' => 
                 array(

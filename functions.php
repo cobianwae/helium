@@ -50,7 +50,8 @@
 					'footer',
 					'content',
 					'comment',
-					'social'
+					'social',
+					'slider'
 				),
 				'global-options' => 'helium'
 			);
