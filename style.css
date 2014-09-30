@@ -386,7 +386,7 @@ body{
 	}
 
 	.top-bar-section ul li {
-		background: transparent;	
+		background: transparent;
 	}
 
 	.top-bar-section .has-dropdown>a:after {
@@ -489,8 +489,61 @@ body{
 		color: #009688;
 	}
 
+	.top-bar-section li.active:not(.has-form) a:not(.button):hover {
+		background-color: transparent;
+	}
+
+	.top-bar-section .dropdown li {
+		background: #f5f5f5;
+	}
 
 	/* END OF UBER MENU */
+
+	/* SCROLL ANIMATION */	
+	.contain-to-grid.header-container.wrapper-nav-sticky {	
+		position: fixed;
+		top: 0;
+		opacity: 0;
+		z-index: 99;
+		transition : opacity 0.2s ease-in-out, top 0.2s ease-in-out;
+		-webkit-transition : opacity 0.2s ease-in-out, top 0.2s ease-in-out;	
+		height: 60px;
+		line-height: 60px;	
+	}
+
+	.wrapper-nav-sticky .title-area > li.name > a {
+		line-height: 60px;
+		height: 60px;
+		display: inline-block;
+	}
+
+	.wrapper-nav-sticky .top-bar .top-bar-section > ul > li:not(.has-form) > a:not(.button) {
+		height: 60px;
+		line-height: 60px;		
+	}
+
+	.wrapper-nav-sticky .top-bar-section .has-dropdown>a:after {
+		top:30px;
+	}
+
+	.wrapper-nav-sticky .top-bar-section li.active:not(.has-form) a:not(.button):hover,
+	.wrapper-nav-sticky .top-bar .top-bar-section > ul > li:not(.has-form) > a:not(.button):hover {
+		background: #f5f5f5;
+	}
+
+	.wrapper-nav-sticky.contain-to-grid .title-area img {
+		height: 40px;
+	}
+
+	.wrapper-nav-sticky .top-bar .top-bar-section > ul > li:not(.has-form) > a:not(.button) {
+		line-height: 60px;
+		height: 60px;
+		background: transparent;
+		font-size: 12px;
+	}
+
+	/* END OF SCROLL ANIMATION */
+
 
 	
 }

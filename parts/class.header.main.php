@@ -43,6 +43,8 @@
 					</section>
 				</nav>
 			</div>
+			<!-- <div class="contain-to-grid full-screen wrapper-header-background" style="background-image:url(<?php bloginfo('template_directory'); ?>/images/5-copy.jpg)"></div> -->
+			<div class="parent-wrapper-nav-sticky"></div>
 			<?php
 		}
 

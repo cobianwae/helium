@@ -50,27 +50,48 @@
 	};
 	var velavo = {};;
 	$(document).ready(function(){
-		 $('.videofit').videofit({
+		 /*$('.videofit').videofit({
 		 	container : '.wae-slider'
 		 });
 		 $('.wae-slider').waeslider({
             effect : 'crossfading',
             pauseOnHover : true
-        });
+        });*/
 		if(Modernizr.mq('(min-width: 40.063em)')){
-	   /* UBER MENU */  
-	   var liHeight = 0
-	         $('li.mega-menu > ul.dropdown > li').each(function(idx, val){          
-	           if($(this).height() > liHeight){
-	             liHeight = $(this).height();
-	           }
-	         });
+	   		/* UBER MENU */  
+	   		var liHeight = 0
+	     	$('li.mega-menu > ul.dropdown > li').each(function(idx, val){          
+				if($(this).height() > liHeight){
+				 liHeight = $(this).height();
+				}
+	     	});
 
-	         $('li.mega-menu > ul.dropdown > li').each(function(idx, val){          
-	           $(this).height(liHeight);          
-	         }); 
-	         /* END OF UBER MENU */
-	  }
+			$('li.mega-menu > ul.dropdown > li').each(function(idx, val){          
+				$(this).height(liHeight);          
+			}); 
+	    	/* END OF UBER MENU */
+
+	    	/* SCROLL ANIMATION */			
+	        var navHeight = $('.wrapper-nav').height();
+	        $('.wrapper-header-background').css('margin-top', (0 - navHeight));
+	        var navClone = $('.wrapper-nav').clone(true)
+				.addClass('wrapper-nav-sticky')
+				.removeClass('wrapper-nav');          
+	         
+	        /*$('.parent-wrapper-nav-sticky > .wrapper-nav-sticky > .top-bar').height(navHeight);
+	        $('.parent-wrapper-nav-sticky > .wrapper-nav-sticky > .top-bar').css('border', '1px solid red');*/
+	        $('body').append(navClone);
+	      
+	        $(window).scroll(function() {
+	          if ( $(window).scrollTop()  > $(window).height() )  {                                  
+	            $('.wrapper-nav-sticky').css('opacity', 1);                     
+	          } else {
+	            $('.wrapper-nav-sticky').css('opacity', 0);                        
+	          }
+	        });
+	        /* END OF SCROLL ANIMATION */
+
+	  	}
 	});
 	$(document).foundation();
 }(jQuery, window));
