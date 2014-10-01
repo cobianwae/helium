@@ -27,7 +27,8 @@
 		}
 
 		function menu_with_position($menu_side, $logo_side){
-			$top_bar_side = ($menu_side == 'center') ? $menu_side : '';
+			$top_bar_side = ($menu_side == 'center') ? $menu_side : '';		
+
 			?>
 
 			<div class="contain-to-grid wrapper-nav header-container">
@@ -38,12 +39,12 @@
 				    	</li>
 				    	<li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
 				    </ul>
-				    <section class="top-bar-section">
+				    <section class="top-bar-section <?php echo $this->options['hover_type'] ?>">
 						<?php do_action( 'wae_menu', 'primary', $menu_side) ?>
 					</section>
 				</nav>
 			</div>
-			<!-- <div class="contain-to-grid full-screen wrapper-header-background" style="background-image:url(<?php bloginfo('template_directory'); ?>/images/5-copy.jpg)"></div> -->
+			<div class="contain-to-grid full-screen wrapper-header-background" style="background-image:url(<?php bloginfo('template_directory'); ?>/images/5-copy.jpg)"></div>
 			<div class="parent-wrapper-nav-sticky"></div>
 			<?php
 		}

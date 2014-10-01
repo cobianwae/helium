@@ -263,9 +263,9 @@ if (!class_exists('helium_admin_config')) {
                             'subtitle' => 'Choose your prefered hover type',
                             'default' => '1',
                             'options' => array(
-                                '1' => 'Icon 1',
-                                '2' => 'Icon 2',
-                                '3' => 'ICon 3'
+                                'full-hover' => 'Icon 1 (Full Hover)',
+                                'no-hover' => 'Icon 2 (No Hover)',
+                                'half-hover' => 'Icon 3 (Half Hover)'
                             )
                         )
 
