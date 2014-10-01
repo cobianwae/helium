@@ -473,12 +473,31 @@ body{
 	}
 
 	.top-bar-section li.active:not(.has-form) a:not(.button) {
-		padding: 0 30px;
+		/*padding: 0 30px;*/
+	}
+
+	.top-bar-section .dropdown a {
+		/*line-height: 19px !important ;*/
+	}
+
+	.top-bar-section > ul > li {
+		padding:0px;
+		margin-right: 15px;		
+	}
+
+	.top-bar-section > ul > li > a:after {
+		content: "";
+		display: none;
+		border: 1px solid red;
 	}
 	
-	.top-bar-section ul li>a {		
+	.top-bar-section ul li > a {		
 		font-size: 12px;
-		font-family: ralewaymedium;
+		font-family: ralewaymedium;		
+	}
+
+	.top-bar-section a, .top-bar-section .dropdown li a {
+		/*white-space: normal;*/
 	}
 
 	.top-bar-section > ul > li:not(.mega-menu) > .dropdown .dropdown {
@@ -496,6 +515,42 @@ body{
 	.top-bar-section .dropdown li {
 		background: #f5f5f5;
 	}
+
+	.top-bar-section li.mega-menu ul li.menu-item-50 {
+		min-width: 50%;
+		width: 50%;
+		left: 25%;
+	}
+
+	li.mega-menu > ul.dropdown > li:hover {
+		/*border-right: 1px solid #009688;*/
+		/*background: #f5f5f5;
+		padding-top: 25px;
+		padding-left: 20px;
+		padding-bottom: 25px;
+		padding-right: 20px;*/
+	}
+
+	.top-bar-section .dropdown li a {
+		padding: 11px 9px;
+	}
+
+	.top-bar-section .dropdown li a span, .dropdown > li a span {
+		/*border: 1px solid red;*/
+		white-space: normal;
+		line-height: 21px !important;
+		display: inline-block;
+		/*word-wrap: break-word;
+		white-space: normal;*/
+				
+	}
+
+	/*.menu-item-75 > .dropdown {
+		border: 1px solid red;
+		min-width: 75%;
+		width: 75%;
+		left: 10%;
+	}*/
 
 	/* END OF UBER MENU */
 
