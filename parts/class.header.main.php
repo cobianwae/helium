@@ -3,6 +3,7 @@
 		function __construct(){
 			parent::__construct();
 			add_action( 'hl_primary_navigation', array( $this, 'display_primary_menu' ) );
+			add_filter('wp_nav_menu_items',array($this, 'hidden_sidebar_button') );
 			// add_filter('wp_nav_menu_items',array($this, 'search_button') );
 		}
 
@@ -44,9 +45,15 @@
 					</section>
 				</nav>
 			</div>
-			<div class="contain-to-grid full-screen wrapper-header-background" style="background-image:url(<?php bloginfo('template_directory'); ?>/images/5-copy.jpg)"></div>
-			<div class="parent-wrapper-nav-sticky"></div>
+			<div class="contain-to-grid full-screen wrapper-header-background" style="background-image:url(<?php bloginfo('template_directory'); ?>/images/5-copy.jpg);min-height:546px"></div>
+			<!-- <div class="parent-wrapper-nav-sticky"></div> -->
 			<?php
+		}
+
+		function hidden_sidebar_button($items){
+			return $items.'<li class="menu-hidden-sidebar">
+								<a class="left-off-canvas-toggle menu-icon" href="#" ><span></span></a>	
+							</li>';
 		}
 
 		function search_button($items){

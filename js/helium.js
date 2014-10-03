@@ -84,9 +84,10 @@
 	      
 	        $(window).scroll(function() {
 	          if ( $(window).scrollTop()  > $(window).height() )  {                                  
-	            $('.wrapper-nav-sticky').css('opacity', 1);                     
+	            /*$('.wrapper-nav-sticky').css('opacity', 1);                     */
+	            $('.wrapper-nav-sticky').css('display', 'block');
 	          } else {
-	            $('.wrapper-nav-sticky').css('opacity', 0);                        
+	            $('.wrapper-nav-sticky').css('display', 'none');                        
 	          }
 	        });
 	        /* END OF SCROLL ANIMATION */

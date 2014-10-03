@@ -53,13 +53,20 @@
 					'social',
 					'slider'
 				),
-				'global-options' => 'helium'
+				'global-options' => 'helium',
+				'footer-widget-areas' => array(
+					array(
+						'name' => __( 'Main Footer', THEMENAME),
+						'id' => 'main-footer'
+					)		
+				),
 			);
 			$this->config = array_merge( $this->config, $config );
 		}
 
 		function load_parts(){
 			$this->instantiate(array('parts','header','main'));
+			$this->instantiate(array('parts','footer','main'));
 		}
 
 		function add_images_size(){
