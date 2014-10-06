@@ -14,6 +14,7 @@
 				wp_register_script( 'popup', WAE_BASE_URL . 'js/jquery.magnific-popup.min.js');
 				wp_register_script( 'foundation' ,WAE_BASE_URL . 'js/foundation.min.js' ,array( 'jquery' ),null, $in_footer = true);
 				wp_register_script( 'foundation-equalizer' ,WAE_BASE_URL . 'js/foundation/foundation.equalizer.js' ,array( 'jquery' ),null, $in_footer = true);
+				wp_register_script( 'foundation-offcanvas' ,WAE_BASE_URL . 'js/foundation/foundation.offcanvas.js' ,array( 'jquery' ),null, $in_footer = true);
 				wp_register_script( 'mediaplayer', WAE_BASE_URL . 'js/mediaelement-and-player.min.js', array( 'jquery' ));
 				wp_register_script( 'modernizr' ,WAE_BASE_URL . 'js/modernizr.js' ,array( 'jquery' ), null, $in_footer = false);
 				wp_register_script( 'imagesloaded', WAE_BASE_URL . 'js/imagesloaded.pkgd.min.js', array( 'jquery' ));
@@ -41,7 +42,7 @@
 
 		function resolve_main_scripts(){
 			global $need_scripts;
-			WAE::resolve_scripts( array( 'jquery', 'easing', 'foundation', 'modernizr', 'imagesloaded' ) );
+			WAE::resolve_scripts( array( 'jquery', 'easing', 'foundation', 'foundation-offcanvas', 'modernizr', 'imagesloaded' ) );
 		}
 
 		function load_scripts(){
