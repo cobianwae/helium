@@ -71,6 +71,8 @@
                 'container'         => '',
                 'container_class'   => '',
         		'container_id'      => '',
+        		'link_before' 		=> '<span>',
+        		'link_after'		=> '</span>',
                 'menu_class'        => $position,
                 'fallback_cb'       => 'Top_Bar_Walker::fallback',
                 'walker'            => new Top_Bar_Walker())

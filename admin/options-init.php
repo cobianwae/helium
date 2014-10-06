@@ -273,6 +273,26 @@ if (!class_exists('helium_admin_config')) {
                 );
 
             $this->sections[] = array(
+                'title' => __('WAE Slider', THEMENAME),
+                'desc' => __('All options related to wae slider list here', THEMENAME),
+                'icon' => 'el-icon-screen',
+                'fields' => array(
+                    array(
+                        'id' => 'slider_skin',
+                        'type' => 'radio',
+                        'title' => __('Slider Skin', THEMENAME),
+                        'subtitle' => 'Choose your desired display for wae slider',
+                        'default' => 'circle',
+                        'options' => array(
+                            'circle' => __('Circle Button', THEMENAME),
+                            'no-border' => __('No border Button', THEMENAME),
+                            'square' => __('Square Button', THEMENAME) 
+                        )
+                    )
+                )
+            );
+
+            $this->sections[] = array(
                 'title'     => __('Import / Export', 'redux-framework-demo'),
                 'desc'      => __('Import and Export your Redux Framework settings from file, text or URL.', 'redux-framework-demo'),
                 'icon'      => 'el-icon-refresh',
