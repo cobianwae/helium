@@ -40,6 +40,33 @@
          url('fonts/raleway/raleway-medium-webfont.svg') format('svg');
 }
 
+@font-face {
+    font-family: 'ralewaysemibold';
+    src: url('fonts/raleway/raleway-semibold-webfont.eot');
+    src: url('fonts/raleway/raleway-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/raleway/raleway-semibold-webfont.woff') format('woff'),
+         url('fonts/raleway/raleway-semibold-webfont.ttf') format('truetype'),
+         url('fonts/raleway/raleway-semibold-webfont.svg') format('svg');
+}
+
+@font-face {
+    font-family: 'opensanslight';
+    src: url('fonts/opensans/raleway-light-webfont.eot');
+    src: url('fonts/opensans/raleway-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/opensans/raleway-light-webfont.woff') format('woff'),
+         url('fonts/opensans/raleway-light-webfont.ttf') format('truetype'),
+         url('fonts/opensans/raleway-light-webfont.svg') format('svg');
+}
+
+@font-face {
+    font-family: 'opensansregular';
+    src: url('fonts/opensans/raleway-regular-webfont.eot');
+    src: url('fonts/opensans/raleway-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/opensans/raleway-regular-webfont.woff') format('woff'),
+         url('fonts/opensans/raleway-regular-webfont.ttf') format('truetype'),
+         url('fonts/opensans/raleway-regular-webfont.svg') format('svg');
+}
+
 .title-area .name{
 	line-height: 45px;
 }
@@ -713,5 +740,190 @@ body{
 	}
 
 	/* END OF HIDDEN SIDEBAR */
+
+	/* ================================== FOOTER ==================================*/
+	.footer {
+		background: #ffffff;
+	}
+	.main-footer.first-row {
+
+	}
+
+	.footer-inner {
+		overflow: hidden;
+	}
+
+	.footer-inner > div > .widget {
+		margin-top: 50px;
+	}
+
+	.footer-inner > div > .widget > h3:first-child {
+		font-family: ralewaysemibold;
+		font-size: 16px;
+		color: #333333;
+		padding-bottom: 5px;
+	}
+
+	/* ================================== END FOOTER ==============================*/
+
+	/* ================================== WIDGET STYLING ==========================*/
+
+	/* Calendar */
+
+	#wp-calendar caption {
+		text-align: left;
+		background-color: #bdbdbd;
+		color: #212121;
+		padding: 6px 7px;
+		font-size: 12px;
+		font-family: opensanslight;
+	}
+
+	#wp-calendar > thead >tr > th {
+		background: #bdbdbd;
+	}
+
+	#wp-calendar > tbody > tr > td {
+		background: #e0e0e0;
+		-webkit-transition: background 0.5s ease-in-out;
+		-moz-transition: background 0.5s ease-in-out;
+		-o-transition: background 0.5s ease-in-out;
+		transition: background 0.5s ease-in-out;
+	}
+
+	#wp-calendar > tbody > tr > td:hover {
+		background:#009688;
+		color:#ffffff;
+	}
+	#wp-calendar thead tr th,
+	#wp-calendar tbody tr td,
+	#wp-calendar tfoot tr td {
+		font-size: 12px;
+		font-family: opensanslight;		
+	}
+
+	#wp-calendar > tfoot > tr > td > a {
+		color: #212121;
+
+	}
+
+	#wp-calendar > tfoot > tr > td > a:hover {
+		color: #ffff00;
+	}
+	/* End Calendar */
+
+	/* Tag Cloud */
+
+	.tagcloud a {
+		border: 1px solid #e0e0e0;
+		font-size: 12px !important;
+		font-family: opensanslight;		
+		padding: 10px;
+		color: #757575;
+		margin-bottom: 10px;
+		margin-right: 4px;
+		display: inline-block;		
+		-webkit-transition: background 0.5s ease-in-out;
+		-moz-transition: background 0.5s ease-in-out;
+		-o-transition: background 0.5s ease-in-out;
+		transition: background 0.5s ease-in-out;
+		background: #ffffff;
+	}
+
+	.tagcloud a:hover {
+		background:#009688;
+		color: #ffffff; 
+		
+	}
+
+	/* End Tag Cloud */
+
+	/* Widget Recent Entries */
+	.widget_recent_entries ul li {
+		list-style-type: none;
+		width: 100%;
+		background: #bdbdbd;
+		margin-left: -16px;		
+		margin-bottom: 15px;
+		font-family: opensanslight;
+		font-size: 12px;
+		padding: 9px 0px 5px 9px;		
+		-webkit-transition: background 0.5s ease-in-out;
+		-moz-transition: background 0.5s ease-in-out;
+		-o-transition: background 0.5s ease-in-out;
+		transition: background 0.5s ease-in-out;
+	}
+
+	.widget_recent_entries ul li a {
+		/*padding: 10px 0px 10px 5px;*/
+		display: inline-block;
+		color: #212121;
+	}
+
+	.widget_recent_entries ul li:hover {
+		background: #009688;
+		color: #ffffff;	
+	}
+
+	.widget_recent_entries ul li:hover a {
+		color: #ffffff;	
+	}
+
+	.widget_recent_entries ul li:hover span.post-date {
+		color: #bdbdbd;	
+	}
+
+	.widget_recent_entries ul li span.post-date {
+		display: block;		
+		color: #757575;		
+	}
+
+	/* End Widget Recent Entries */
+
+	/* Recent Wae Comments */
+	ul#wae-recent-comments {		
+		
+	}
+
+	li.wae-recent-comments {
+		font-family: opensanslight;
+		list-style-type: none;
+		padding-left: 116px;
+		position: relative;
+		margin-left: -16px;		
+	}
+
+	li.wae-recent-comments .comment-author > img {
+		position: absolute;
+		left: 0;
+	}
+
+
+	li.wae-recent-comments > a > h4 {
+		font-size: 12px;		
+		color: #757575;
+	}
+
+	li.wae-recent-comments > a {
+		font-size: 12px;		
+		color: #bdbdbd;
+	}
+
+	li.wae-recent-comments > a > h4 {
+		font-family: opensanslight;
+		font-size: 12px;
+		color: #757575;
+	}
+
+	li.wae-recent-comments > a > p {
+		font-family: opensanslight;
+		font-size: 12px;
+		color: #bdbdbd;	
+	}
+	/* End Recent Wae Comments */
+
+
+	/* =============================== END WIDGET STYLING ==========================*/
+
 	
 }
