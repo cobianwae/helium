@@ -273,6 +273,7 @@ if (!class_exists('helium_admin_config')) {
                 );
 
             $this->sections[] = array(
+
                 'icon' => ' el-icon-asterisk',
                 'title' => __('Footer Options', THEMENAME),
                 'desc' => __('All footer related options are listed here.', THEMENAME),
@@ -425,7 +426,27 @@ if (!class_exists('helium_admin_config')) {
                         'title' => __('Use SoundCloud Icon', THEMENAME), 
                         'subtitle' => '',
                         'desc' => ''
-                    ),
+                    )
+                )            
+            );
+
+            $this->sections[] = array(
+                'title' => __('WAE Slider', THEMENAME),
+                'desc' => __('All options related to wae slider list here', THEMENAME),
+                'icon' => 'el-icon-screen',
+                'fields' => array(
+                    array(
+                        'id' => 'slider_skin',
+                        'type' => 'radio',
+                        'title' => __('Slider Skin', THEMENAME),
+                        'subtitle' => 'Choose your desired display for wae slider',
+                        'default' => 'circle',
+                        'options' => array(
+                            'circle' => __('Circle Button', THEMENAME),
+                            'no-border' => __('No border Button', THEMENAME),
+                            'square' => __('Square Button', THEMENAME) 
+                        )
+                    )
                 )
             );
 

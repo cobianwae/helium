@@ -7,17 +7,21 @@
 		}
 
 		function display_slider(){
+			$options = $this->options;
+			$skin = !empty($options['slider_skin']) ? $options['slider_skin'] : 'circle' ;
 			WAE::resolve_scripts(array('imagesloaded', 'waeslider', 'videofit'));
 			$slides = $this->get_data();
 			if(!$slides) return;
 			?>
-			<div id="full-slider" class="wae-slider fullscreen">
+			<div id="full-slider" class="wae-slider fullscreen <?php echo $skin ?>">
 			  <div class="items">
 			  	<?php
 		  		foreach ($slides as $key => $slide):
 		  			$active = $key  == 0 ? 'active' : '';
+		  			$title_style = $slide['title_style'] == 'regular' ? 'regular' : 'with-'.$slide['title_style'];
+		  			$subtitle_style = $slide['subtitle_style'] == 'regular' ? 'regular' : 'with-'. $slide['subtitle_style'];
 		  			?>
-		  			<div class="item <?php echo $active ?>">
+		  			<div class="item <?php echo $active ?> <?php echo $slide['caption_color'] ?>">
 		  				<?php if ( !empty($slide['mp4']) || !empty($slide['ogv']) ) : ?>
 	  					 <div class="item-bg">
 		  					<video class="videofit" preload="auto" autoplay="autoplay" loop="loop">
@@ -34,8 +38,8 @@
 		  				<?php endif; ?>
 		  				<div class="item-content content-<?php echo $slide['alignment'] ?>">
 		  				  <div class="animate">
-			  				  <h2><?php echo $slide['caption_title'] ?></h2>
-			  				  <p><?php echo $slide['caption_subtitle'] ?></p>
+			  				  <h1><span class="<?php echo $title_style ?>"><?php echo $slide['caption_title'] ?></span></h1>
+			  				  <p><span class="<?php echo $subtitle_style ?>"><?php echo $slide['caption_subtitle'] ?></span></p>
 		  				  </div>
 		  				</div>
 		  			</div>
@@ -45,8 +49,26 @@
 			  </div>
 			  <a class="left-control slider-nav" href="#full-slider">
 			    <span class="icon-arrow-left"></span>
+			    <?php
+			    	if($skin == 'square'){
+			    		echo '<div class="slide-counter">';
+			    		echo '<span class="slide-index">1</span>';
+			    		echo '<div class="diagonal-line"></div>';
+			    		echo '<span class="slide-total">'.count($slides).'</span>';
+			    		echo '</div>';
+			    	}
+			     ?>
 			  </a>
 			  <a class="right-control slider-nav" href="#full-slider">
+			  	<?php
+			    	if($skin == 'square'){
+			    		echo '<div class="slide-counter">';
+			    		echo '<span class="slide-index">1</span>';
+			    		echo '<div class="diagonal-line"></div>';
+			    		echo '<span class="slide-total">'.count($slides).'</span>';
+			    		echo '</div>';
+			    	}
+			     ?>
 			    <span class="icon-arrow-right"></span>
 			  </a>
 			  <?php $this->generate_indicators(count($slides)); ?>

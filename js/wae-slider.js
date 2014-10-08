@@ -42,9 +42,12 @@
 					onAnimation = false;
 					if ( !activeHover ) timer = setInterval(cycleSlide,settings.pauseTime);
 					$active.unbind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", changeState);
+					settings.afterChange($active, $moveTo);
 				}
 				$active.bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", changeState);
+				
 				//fire the animation
+				settings.beforeChange($active, $moveTo);
 				$active.find('.animate').addClass('fadeOut');
 			}
 			
@@ -108,8 +111,8 @@
 		manualAdvance: false,
 		prevText : 'Prev',
 		nextText : 'Next',
-		beforeChange : function(){},
-		afterChange: function(){},
+		beforeChange : function($active, $moveTo){},
+		afterChange: function($active, $moveTo){},
 		afterLoad: function(){}
 	};
 
