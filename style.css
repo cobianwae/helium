@@ -526,226 +526,344 @@ body{
 
 /* ================================== WIDGET STYLING ==========================*/
 
-	/* Calendar */
+/*** General Widget Style ***/
+.widget{
+	margin-bottom: 30px;
+}
+.widget > h2{
+	font-size: 1rem;
+	font-family: Raleway;
+	font-weight: 600;
+	color:#fff;
+	margin-bottom: 1rem;
+}
+.widget > ul > li{
+	list-style: none;
+}
+.widget > ul{
+	margin:0;
+}
+.widget h1,
+.widget h2,
+.widget h3,
+.widget h4,
+.widget h5{
+	color:#fff;
+}
+.widget,
+.widget p{
+	font-size: 0.75rem;
+	font-family: Open Sans;
+	color:#bdbdbd;
+}
 
-	#wp-calendar caption {
-		text-align: left;
-		background-color: #bdbdbd;
-		color: #212121;
-		padding: 6px 7px;
-		font-size: 12px;
-		font-family: opensanslight;
-	}
+.widget h4 {
+	color: 
+	font-size:;
+}
 
-	#wp-calendar > thead >tr > th {
-		background: #bdbdbd;
-	}
+/* Calendar */
 
-	#wp-calendar > tbody > tr > td {
-		background: #e0e0e0;
-		-webkit-transition: background 0.5s ease-in-out;
-		-moz-transition: background 0.5s ease-in-out;
-		-o-transition: background 0.5s ease-in-out;
-		transition: background 0.5s ease-in-out;
-	}
+#wp-calendar caption {
+	text-align: left;
+	background-color: #bdbdbd;
+	color: #212121;
+	padding: 6px 7px;
+}
 
-	#wp-calendar > tbody > tr > td:hover {
-		background:#009688;
-		color:#ffffff;
-	}
-	#wp-calendar thead tr th,
-	#wp-calendar tbody tr td,
-	#wp-calendar tfoot tr td {
-		font-size: 12px;
-		font-family: opensanslight;		
-	}
+#wp-calendar > thead >tr > th {
+	background: #bdbdbd;
+}
 
-	#wp-calendar > tfoot > tr > td > a {
-		color: #212121;
+#wp-calendar > tbody > tr > td {
+	background: #e0e0e0;
+	-webkit-transition: background 0.5s ease-in-out;
+	-moz-transition: background 0.5s ease-in-out;
+	-o-transition: background 0.5s ease-in-out;
+	transition: background 0.5s ease-in-out;
+}
 
-	}
+#wp-calendar > tbody > tr > td:hover {
+	background:#009688;
+	color:#ffffff;
+}
+#wp-calendar thead tr th,
+#wp-calendar tbody tr td,
+#wp-calendar tfoot tr td {	
+}
 
-	#wp-calendar > tfoot > tr > td > a:hover {
-		color: #ffff00;
-	}
-	/* End Calendar */
+#wp-calendar > tfoot > tr > td > a {
+	color: #212121;
 
-	/* Tag Cloud */
+}
 
-	.tagcloud a {
-		border: 1px solid #e0e0e0;
-		font-size: 12px !important;
-		font-family: opensanslight;		
-		padding: 10px;
-		color: #757575;
-		margin-bottom: 10px;
-		margin-right: 4px;
-		display: inline-block;		
-		-webkit-transition: background 0.5s ease-in-out;
-		-moz-transition: background 0.5s ease-in-out;
-		-o-transition: background 0.5s ease-in-out;
-		transition: background 0.5s ease-in-out;
-		background: #ffffff;
-	}
+#wp-calendar > tfoot > tr > td > a:hover {
+	color: #ffff00;
+}
 
-	.tagcloud a:hover {
-		background:#009688;
-		color: #ffffff; 
-		
-	}
+#wp-calendar table tfoot tr th, 
+table tfoot tr td {
+	font-weight: normal;
+}
 
-	/* End Tag Cloud */
+#wp-calendar > tfoot {
+	background: #bdbdbd;
+	border-spacing: 10px;
+    border-collapse: separate;
+}
 
-	/* Widget Recent Entries */
-	.widget_recent_entries ul li {
-		list-style-type: none;
-		width: 100%;
-		background: #bdbdbd;
-		margin-left: -16px;		
-		margin-bottom: 15px;
-		font-family: opensanslight;
-		font-size: 12px;
-		padding: 9px 0px 5px 9px;		
-		-webkit-transition: background 0.5s ease-in-out;
-		-moz-transition: background 0.5s ease-in-out;
-		-o-transition: background 0.5s ease-in-out;
-		transition: background 0.5s ease-in-out;
-	}
+.large-4 > .widget.widget_calendar td {
+	padding: 12px;
+}
+/* End Calendar */
 
-	.widget_recent_entries ul li a {
-		/*padding: 10px 0px 10px 5px;*/
-		display: inline-block;
-		color: #212121;
-	}
+/* Tag Cloud */
 
-	.widget_recent_entries ul li:hover {
-		background: #009688;
-		color: #ffffff;	
-	}
+.tagcloud a {
+	border: 1px solid #e0e0e0;
+	font-size: 12px !important;
+	padding: 10px;
+	color: #757575;
+	margin-bottom: 10px;
+	margin-right: 4px;
+	display: inline-block;		
+	-webkit-transition: background 0.5s ease-in-out;
+	-moz-transition: background 0.5s ease-in-out;
+	-o-transition: background 0.5s ease-in-out;
+	transition: background 0.5s ease-in-out;
+	background: #ffffff;
+}
 
-	.widget_recent_entries ul li:hover a {
-		color: #ffffff;	
-	}
+.tagcloud a:hover {
+	background:#009688;
+	color: #ffffff; 
+	
+}
 
-	.widget_recent_entries ul li:hover span.post-date {
-		color: #bdbdbd;	
-	}
+/* End Tag Cloud */
 
-	.widget_recent_entries ul li span.post-date {
-		display: block;		
-		color: #757575;		
-	}
+/* Widget Recent Entries */
+.widget_recent_entries ul li {
+	list-style-type: none;
+	width: 100%;
+	background: #bdbdbd;	
+	margin-bottom: 15px;
+	font-size: 12px;
+	padding: 9px 0px 5px 9px;		
+	-webkit-transition: background 0.5s ease-in-out;
+	-moz-transition: background 0.5s ease-in-out;
+	-o-transition: background 0.5s ease-in-out;
+	transition: background 0.5s ease-in-out;
+}
 
-	/* End Widget Recent Entries */
+.widget_recent_entries ul li a {
+	/*padding: 10px 0px 10px 5px;*/
+	display: inline-block;
+	color: #212121;
+}
 
-	/* Recent Wae Comments */
-	ul#wae-recent-comments {		
-		
-	}
+.widget_recent_entries ul li:hover {
+	background: #009688;
+	color: #ffffff;	
+}
 
-	li.wae-recent-comments {
-		font-family: opensanslight;
-		list-style-type: none;
-		padding-left: 116px;
-		position: relative;
-		margin-left: -16px;		
-	}
+.widget_recent_entries ul li:hover a {
+	color: #ffffff;	
+}
 
-	li.wae-recent-comments .comment-author > img {
-		position: absolute;
-		left: 0;
-	}
+.widget_recent_entries ul li:hover span.post-date {
+	color: #bdbdbd;	
+}
 
+.widget_recent_entries ul li span.post-date {
+	display: block;		
+	color: #757575;		
+}
 
-	li.wae-recent-comments > a > h4 {
-		font-size: 12px;		
-		color: #757575;
-	}
+/* End Widget Recent Entries */
 
-	li.wae-recent-comments > a {
-		font-size: 12px;		
-		color: #bdbdbd;
-	}
+/* Recent Wae Comments */
+ul#wae-recent-comments {		
+	
+}
 
-	li.wae-recent-comments > a > h4 {
-		font-family: opensanslight;
-		font-size: 12px;
-		color: #757575;
-	}
+li.wae-recent-comments {
+	list-style-type: none;
+	padding-left: 116px;
+	position: relative;		
+}
 
-	li.wae-recent-comments > a > p {
-		font-family: opensanslight;
-		font-size: 12px;
-		color: #bdbdbd;	
-	}
-	/* End Recent Wae Comments */
-
-	/* WAE Instagram */
-
-	.wae_instagram_widget ul{
-		margin:0 -5px;
-	}
-	.wae_instagram_widget ul li{
-		float: left;
-		width:50%;
-		padding:0 5px;
-		margin: 5px 0;
-		list-style-type: none;
-	}
-	.wae_instagram_widget ul li .wae-instagram-widget{
-		position: relative;
-		text-align: center;
-	}
-	.wae-instagram-widget .icon-heart{
-		font-size: 1.875rem;
-	}
-	.wae-instagram-widget p{
-		text-align: center;
-		margin:0;
-		font-size: 1.25rem;
-		line-height: 1.2;
-		color:#212121;
-	}
-	.wae_instagram_widget ul li a:before {
-		content: '';
-		height: 100%;
-		vertical-align: middle;
-		display: inline-block;
-	}
-	.wae_instagram_widget ul li a .instagram-likes{
-		vertical-align: middle;
-		display: inline-block;
-		color:#212121;
-	}
-	.wae_instagram_widget ul li a {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		left: 0;
-		display: block;
-		background: #009688;     
-		opacity: 0;
-		-webkit-transition: opacity 0.5s;
-		-o-transition: opacity 0.5s;
-		-moz-transition: opacity 0.5s;
-		transition: opacity 0.5s;
-		text-align: center;
-	}
-	.wae_instagram_widget ul li a:hover{
-		cursor: pointer;
-		opacity: 0.87;
-	}
-
-	.wae_instagram_widget span.icon-heart:before,
-	.wae_instagram_widget p {
-		color: #ffffff;
-	}
-
- /* End WAE Instagram */
+li.wae-recent-comments .comment-author > img {
+	position: absolute;
+	left: 0;
+}
 
 
-	/* =============================== END WIDGET STYLING ==========================*/
+li.wae-recent-comments > a > h4 {
+	color: #757575;
+}
+
+li.wae-recent-comments > a {
+	color: #bdbdbd;
+}
+
+li.wae-recent-comments > a > h4 {
+	color: #757575;
+}
+
+li.wae-recent-comments > a > p {
+	color: #bdbdbd;	
+}
+/* End Recent Wae Comments */
+
+/* WAE Instagram */
+
+.wae_instagram_widget ul{
+	margin:0 -5px;
+}
+.wae_instagram_widget ul li{
+	float: left;
+	width:50%;
+	padding:0 5px;
+	margin: 5px 0;
+	list-style-type: none;
+}
+.wae_instagram_widget ul li .wae-instagram-widget{
+	position: relative;
+	text-align: center;
+}
+.wae-instagram-widget .icon-heart{
+	font-size: 1.875rem;
+}
+.wae-instagram-widget p{
+	text-align: center;
+	margin:0;
+	font-size: 1.25rem;
+	line-height: 1.2;
+	color:#212121;
+}
+.wae_instagram_widget ul li a:before {
+	content: '';
+	height: 100%;
+	vertical-align: middle;
+	display: inline-block;
+}
+.wae_instagram_widget ul li a .instagram-likes{
+	vertical-align: middle;
+	display: inline-block;
+	color:#212121;
+}
+.wae_instagram_widget ul li a {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: block;
+	background: #009688;     
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	-o-transition: opacity 0.5s;
+	-moz-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+	text-align: center;
+}
+.wae_instagram_widget ul li a:hover{
+	cursor: pointer;
+	opacity: 0.87;
+}
+
+.wae_instagram_widget span.icon-heart:before,
+.wae_instagram_widget p {
+	color: #ffffff;
+}
+
+/* End WAE Instagram */
+
+/* Search */
+ .widget_search .screen-reader-text{
+ 	display: none;
+ }
+ .widget_search #searchform{
+ 	position: relative;
+ 	padding-right: 34px;
+ }
+ .widget_search input[type="text"]{
+ 	width: 100%;
+ 	padding:6px;
+ 	margin-right: 4px;
+ 	border:1px solid #bdbdbd;
+ 	font-size: 0.75rem;
+ }
+
+ .widget_search input[type="text"]:hover{
+ 	border-color: #009688;
+ }
+
+ 
+ .widget_search button[type="submit"]{
+ 	background:transparent;
+ 	border:1px solid #757575;
+ 	font-size: 0.75rem;
+ 	color:#757575;
+ 	padding:6px 8px;
+ 	-webkit-transition:0.2s;
+ 	-o-transition: 0.2s;
+ 	-moz-transition: 0.2s;
+ 	transition: 0.2s;
+ 	margin-bottom: 0;
+ 	position: absolute;
+ 	right: 0;
+ 	top: 2px;
+ }
+ .widget_search form > div > i{
+ 	display: none;
+ }
+ .widget_search button[type="submit"]:hover{
+ 	background-color: #00bcd4;
+ 	border-color: #00bcd4;
+ 	color:#fff;
+ 	cursor: pointer;
+ }
+/* End Search */
+
+/* Categories */
+.widget.widget_categories > ul > li {
+	background: #e0e0e0;
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	position: relative;
+}
+
+.widget.widget_categories > ul > li:hover {
+	background: #009688;
+}
+
+.widget.widget_categories > ul > li:hover a {
+	color: #ffffff;
+}
+
+.widget.widget_categories > ul > li > a {
+	width: 100%;
+	display: block;
+}
+
+.widget.widget_categories > ul > li > a > span {
+	position: absolute;
+	right: 10px;
+}
+/* End Categories */
+
+
+/* WAE About Widget */
+.widget h4 {	
+	font-size: 0.875rem;
+}
+/* End WAE About Widget */
+
+
+/* =============================== END WIDGET STYLING ==========================*/
 
 
 

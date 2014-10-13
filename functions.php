@@ -19,6 +19,7 @@
 			parent::__construct();
 			$this->add_images_size();
 			add_action( 'vc_before_init', array( $this, 'vc_as_theme' ) );
+			add_filter('wp_list_categories', array( $this, 'cat_count_span' ));
 			// add_action( 'init', array($this, 'vc_row_extend') );
 		}
 
@@ -76,6 +77,12 @@
 
 		function vc_as_theme(){
 			vc_set_as_theme();
+		}
+
+		function cat_count_span($links) {
+			$links = str_replace('</a> (', '<span>', $links);
+			$links = str_replace(')', '</span></a>', $links);
+			return $links;
 		}
 
 		// function vc_row_extend(){
