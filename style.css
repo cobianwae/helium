@@ -806,19 +806,26 @@ li.wae-recent-comments > a > p {
  	margin-right: 4px;
  	border:1px solid #bdbdbd;
  	font-size: 0.75rem;
+ 	height: auto;
+ 	color:#212121;
  }
 
- .widget_search input[type="text"]:hover{
- 	border-color: #009688;
+ .widget_search input[type="text"]:focus{
+ 	background: #ffffff; 	
+ }
+
+ .widget_search input[type="text"]:hover,
+ .widget_search input[type="text"]:focus{
+ 	border-color: #009688; 	
  }
 
  
  .widget_search button[type="submit"]{
  	background:transparent;
- 	border:1px solid #757575;
+ 	border:1px solid #bdbdbd;
  	font-size: 0.75rem;
  	color:#757575;
- 	padding:6px 8px;
+ 	padding: 7.2px 8px;
  	-webkit-transition:0.2s;
  	-o-transition: 0.2s;
  	-moz-transition: 0.2s;
@@ -826,22 +833,28 @@ li.wae-recent-comments > a > p {
  	margin-bottom: 0;
  	position: absolute;
  	right: 0;
- 	top: 2px;
+ 	top: 0px;
  }
  .widget_search form > div > i{
  	display: none;
  }
- .widget_search button[type="submit"]:hover{
- 	background-color: #00bcd4;
- 	border-color: #00bcd4;
- 	color:#fff;
+ .widget_search button[type="submit"]:hover {
+ 	background-color: #009688;
+ 	border-color: #bdbdbd; 	
  	cursor: pointer;
+ }
+
+ .widget_search button[type="submit"]:hover 
+
+ .widget_search form > div > button > i:before {
+ 	color: #bdbdbd;
  }
 /* End Search */
 
 /* Categories and Archives */
 .widget.widget_categories > ul > li,
-.widget.widget_archive > ul > li {
+.widget.widget_archive > ul > li,
+.widget.widget_pages {
 	background: transparent;	
 	position: relative;	
 	margin-bottom: 15px;
@@ -849,7 +862,8 @@ li.wae-recent-comments > a > p {
 
 .widget.widget_categories > ul > li > a:hover,
 .widget.widget_archive > ul > li > a:hover,
-.widget_categories > ul > li ul.children li a:hover {
+.widget_categories > ul > li ul.children li a:hover,
+.widget.widget_pages > ul > li > a:hover, {
 	background: #009688;
 }
 
@@ -862,13 +876,16 @@ li.wae-recent-comments > a > p {
 }
 
 .widget.widget_categories > ul > li > a:hover,
-.widget.widget_archive > ul > li:hover a,
+.widget.widget_archive > ul > li a:hover,
+.widget.widget_pages > ul > li a:hover,
 .widget_categories > ul > li ul.children li a:hover {
 	color: #ffffff;
+	background: #009688;
 }
 
 .widget.widget_categories > ul > li > a,
 .widget.widget_archive > ul > li > a,
+.widget.widget_pages > ul > li > a,
 .widget_categories > ul > li ul.children li a {
 	width: 100%;
 	display: block;
@@ -886,6 +903,7 @@ li.wae-recent-comments > a > p {
 
 .widget.widget_categories > ul > li > a > span,
 .widget.widget_archive > ul > li > a > span,
+.widget.widget_pages > ul > li > a > span,
 .widget_categories > ul > li ul.children li a > span {
 	position: absolute;
 	right: 10px;
