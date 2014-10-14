@@ -656,7 +656,7 @@ table tfoot tr td {
 	background: #bdbdbd;	
 	margin-bottom: 15px;
 	font-size: 12px;
-	padding: 9px 0px 5px 9px;		
+	padding: 0px 0px 5px 9px;		
 	-webkit-transition: background 0.5s ease-in-out;
 	-moz-transition: background 0.5s ease-in-out;
 	-o-transition: background 0.5s ease-in-out;
@@ -667,6 +667,10 @@ table tfoot tr td {
 	/*padding: 10px 0px 10px 5px;*/
 	display: inline-block;
 	color: #212121;
+	width: 100%;
+	display: block;
+	height: 100%;
+	padding-top: 9px;
 }
 
 .widget_recent_entries ul li:hover {
@@ -837,10 +841,7 @@ li.wae-recent-comments > a > p {
 /* Categories */
 .widget.widget_categories > ul > li,
 .widget.widget_archive > ul > li {
-	background: #e0e0e0;
-	padding-left: 5px;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	background: transparent;	
 	position: relative;
 	-webkit-transition: background 0.5s ease-in-out;
 	-moz-transition: background 0.5s ease-in-out;
@@ -849,25 +850,41 @@ li.wae-recent-comments > a > p {
 	margin-bottom: 15px;
 }
 
-.widget.widget_categories > ul > li:hover,
-.widget.widget_archive > ul > li:hover {
+.widget.widget_categories > ul > li > a:hover,
+.widget.widget_archive > ul > li > a:hover,
+.widget_categories > ul > li ul.children li a:hover {
 	background: #009688;
 }
 
-.widget.widget_categories > ul > li:hover a,
-.widget.widget_archive > ul > li:hover a {
+.widget_categories > ul > li ul.children li{
+	list-style-type: none;
+}
+
+.widget_categories > ul > li ul.children li {
+	margin-top: 15px;
+}
+
+.widget.widget_categories > ul > li > a:hover,
+.widget.widget_archive > ul > li:hover a,
+.widget_categories > ul > li ul.children li a:hover {
 	color: #ffffff;
 }
 
 .widget.widget_categories > ul > li > a,
-.widget.widget_archive > ul > li > a {
+.widget.widget_archive > ul > li > a,
+.widget_categories > ul > li ul.children li a {
 	width: 100%;
 	display: block;
 	color: #212121;
+	padding-left: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background: #e0e0e0;
 }
 
 .widget.widget_categories > ul > li > a > span,
-.widget.widget_archive > ul > li > a > span {
+.widget.widget_archive > ul > li > a > span,
+.widget_categories > ul > li ul.children li a > span {
 	position: absolute;
 	right: 10px;
 }
