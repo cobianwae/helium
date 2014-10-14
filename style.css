@@ -551,7 +551,9 @@ body{
 	color:#fff;
 }
 .widget,
-.widget p{
+.widget p,
+.widget a,
+table tr td {
 	font-size: 0.75rem;
 	font-family: Open Sans;
 	color:#bdbdbd;
@@ -581,6 +583,11 @@ body{
 	-moz-transition: background 0.5s ease-in-out;
 	-o-transition: background 0.5s ease-in-out;
 	transition: background 0.5s ease-in-out;
+	color: #212121;
+}
+
+#wp-calendar > tbody > tr > td > a {
+	color: #212121;
 }
 
 #wp-calendar > tbody > tr > td:hover {
@@ -828,28 +835,39 @@ li.wae-recent-comments > a > p {
 /* End Search */
 
 /* Categories */
-.widget.widget_categories > ul > li {
+.widget.widget_categories > ul > li,
+.widget.widget_archive > ul > li {
 	background: #e0e0e0;
 	padding-left: 5px;
-	padding-top: 5px;
-	padding-bottom: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	position: relative;
+	-webkit-transition: background 0.5s ease-in-out;
+	-moz-transition: background 0.5s ease-in-out;
+	-o-transition: background 0.5s ease-in-out;
+	transition: background 0.5s ease-in-out;
+	margin-bottom: 15px;
 }
 
-.widget.widget_categories > ul > li:hover {
+.widget.widget_categories > ul > li:hover,
+.widget.widget_archive > ul > li:hover {
 	background: #009688;
 }
 
-.widget.widget_categories > ul > li:hover a {
+.widget.widget_categories > ul > li:hover a,
+.widget.widget_archive > ul > li:hover a {
 	color: #ffffff;
 }
 
-.widget.widget_categories > ul > li > a {
+.widget.widget_categories > ul > li > a,
+.widget.widget_archive > ul > li > a {
 	width: 100%;
 	display: block;
+	color: #212121;
 }
 
-.widget.widget_categories > ul > li > a > span {
+.widget.widget_categories > ul > li > a > span,
+.widget.widget_archive > ul > li > a > span {
 	position: absolute;
 	right: 10px;
 }
