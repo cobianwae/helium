@@ -33,7 +33,8 @@
 					'about',
 					'popular_posts',
 					'recent_comments',
-					'instagram'
+					'instagram',
+					'recent_posts'
 				),
 				'nav-menus' => array(
 					'primary' => __( 'Primary Menu', THEMENAME ),
@@ -94,7 +95,7 @@
 			$links = str_replace('&nbsp;', '', $links);
 			return $links;
 		}		
-		
+
 		// function vc_row_extend(){
 		// 	$vc_row = WPBMap::getShortCode('vc_column');
 		// 	// var_dump($vc_row);

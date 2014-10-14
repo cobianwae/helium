@@ -553,6 +553,7 @@ body{
 .widget,
 .widget p,
 .widget a,
+.widget span,
 table tr td {
 	font-size: 0.75rem;
 	font-family: Open Sans;
@@ -838,15 +839,11 @@ li.wae-recent-comments > a > p {
  }
 /* End Search */
 
-/* Categories */
+/* Categories and Archives */
 .widget.widget_categories > ul > li,
 .widget.widget_archive > ul > li {
 	background: transparent;	
-	position: relative;
-	-webkit-transition: background 0.5s ease-in-out;
-	-moz-transition: background 0.5s ease-in-out;
-	-o-transition: background 0.5s ease-in-out;
-	transition: background 0.5s ease-in-out;
+	position: relative;	
 	margin-bottom: 15px;
 }
 
@@ -880,6 +877,11 @@ li.wae-recent-comments > a > p {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	background: #e0e0e0;
+
+	-webkit-transition: background 0.5s ease-in-out;
+	-moz-transition: background 0.5s ease-in-out;
+	-o-transition: background 0.5s ease-in-out;
+	transition: background 0.5s ease-in-out;
 }
 
 .widget.widget_categories > ul > li > a > span,
@@ -887,6 +889,13 @@ li.wae-recent-comments > a > p {
 .widget_categories > ul > li ul.children li a > span {
 	position: absolute;
 	right: 10px;
+	color: #212121;
+}
+
+.widget.widget_categories > ul > li > a:hover > span,
+.widget.widget_archive > ul > li > a:hover > span,
+.widget_categories > ul > li ul.children li a:hover > span {
+	color: #ffffff;
 }
 /* End Categories */
 
@@ -896,6 +905,93 @@ li.wae-recent-comments > a > p {
 	font-size: 0.875rem;
 }
 /* End WAE About Widget */
+
+/* WAE Recent Posts */
+
+.wae_recent_posts_widget .post_thumbnail > img {
+	position: absolute;
+	left: 0;	
+	top: 0;
+}
+
+.wae_recent_posts_widget > ul > li {
+	position: relative;
+	margin-bottom: 60px;
+	padding-left: 90px;
+}
+
+.wae_recent_posts_widget > ul > li > a > span {
+	width: 100%;
+	display: inline-block;	
+}
+
+.wae_recent_posts_widget > ul > li > a > span.post-title {
+	margin-bottom: 2px;
+	color: #757575;
+}
+
+.wae_recent_posts_widget > ul > li > a > span.post-title:hover {
+	color: #009688;
+}
+
+.wae_recent_posts_widget > ul > li > a > span.post-date {
+	color: #bdbdbd;
+}
+
+.wae_recent_posts_widget > ul > li > a {
+	height: 100%;
+	display: inline-block;
+	margin-top: -4px;
+}
+
+.wae_recent_posts_widget > ul > li > a ,
+.wae_recent_posts_widget > ul > li > span.post-date {
+	
+}
+
+/* lists without thumbnail */
+.wae_recent_posts_widget ul li.wae-recent-posts-list {
+	list-style-type: none;
+	width: 100%;
+	background: #bdbdbd;	
+	margin-bottom: 15px;
+	font-size: 12px;
+	padding: 0px 0px 5px 5px;
+	-webkit-transition: background 0.5s ease-in-out;
+	-moz-transition: background 0.5s ease-in-out;
+	-o-transition: background 0.5s ease-in-out;
+	transition: background 0.5s ease-in-out;
+}
+
+.wae_recent_posts_widget ul li.wae-recent-posts-list a {
+	/*padding: 10px 0px 10px 5px;*/
+	display: inline-block;
+	color: #212121;
+	width: 100%;
+	display: block;
+	height: 100%;
+	padding-top: 9px;
+}
+
+.wae_recent_posts_widget ul li.wae-recent-posts-list:hover {
+	background: #009688;
+	color: #ffffff;	
+}
+
+.wae_recent_posts_widget ul li.wae-recent-posts-list:hover a {
+	color: #ffffff;	
+}
+
+.wae_recent_posts_widget ul li.wae-recent-posts-list:hover span.post-date {
+	color: #bdbdbd;	
+}
+
+.wae_recent_posts_widget ul li.wae-recent-posts-list span.post-date {
+	display: block;		
+	color: #757575;		
+}
+
+/* End WAE Recent Posts */
 
 
 /* =============================== END WIDGET STYLING ==========================*/
