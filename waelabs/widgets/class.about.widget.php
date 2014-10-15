@@ -22,6 +22,11 @@
 			$about_title = !empty($instance['about_title']) ? $instance['about_title'] : '';
 			$image_options['title'] = $about_title;
 			$about_description = !empty($instance['about_description']) ? $instance['about_description'] : '';
+			$facebook_url = !empty($instance['facebook_url']) ? $instance['facebook_url'] : '';
+			$twitter_url = !empty($instance['twitter_url']) ? $instance['twitter_url'] : '';
+			$instagram_url = !empty($instance['instagram_url']) ? $instance['instagram_url'] : '';
+			$pinterest_url = !empty($instance['pinterest_url']) ? $instance['pinterest_url'] : '';
+			$googleplus_url = !empty($instance['googleplus_url']) ? $instance['googleplus_url'] : '';
 			
 			echo $before_widget;
 			if ( $title  && $show_title) echo $before_title . $title . $after_title;
@@ -30,6 +35,47 @@
 				<?php $this->display_image( $image_options ); ?>
 				<h4><?php echo $about_title ?></h4>
 				<p><?php echo $about_description ?></p>
+				<ul class="about-social-media">
+				<?php if ($facebook_url != '') : ?>
+					<li>
+						<a href="<?php echo $facebook_url; ?>" class="facebook" title="Facebook">
+	               			<i class="fa fa-facebook"></i>
+	               		</a>
+					</li>
+				<?php endif; ?>
+
+				<?php if ($twitter_url != '') : ?>
+					<li>
+						<a href="<?php echo $twitter_url; ?>" class="twitter" title="Twitter">
+	               			<i class="fa fa-twitter"></i>
+	               		</a>
+					</li>
+				<?php endif; ?>
+
+				<?php if ($instagram_url != '') : ?>
+					<li>
+						<a href="<?php echo $instagram_url; ?>" class="instagram" title="Facebook">
+	               			<i class="fa fa-instagram"></i>
+	               		</a>
+					</li>
+				<?php endif; ?>
+
+				<?php if ($pinterest_url != '') : ?>
+					<li>
+						<a href="<?php echo $pinterest_url; ?>" class="pinterest" title="Pinterest">
+	               			<i class="fa fa-pinterest"></i>
+	               		</a>
+					</li>
+				<?php endif; ?>
+
+				<?php if ($googleplus_url != '') : ?>
+					<li>
+						<a href="<?php echo $googleplus_url; ?>" class="google-plus" title="Google +">
+	               			<i class="fa fa-google-plus"></i>
+	               		</a>
+					</li>
+				<?php endif; ?>
+				</ul>
 			</div>
 			<?php
 			echo $after_widget;
@@ -45,6 +91,11 @@
 			$image_url = !empty($instance['image_url']) ? $instance['image_url'] : '';
 			$about_title = !empty($instance['about_title']) ? $instance['about_title'] : '';
 			$about_description = !empty($instance['about_description']) ? $instance['about_description'] : '';
+			$facebook_url = !empty($instance['facebook_url']) ? $instance['facebook_url'] : '';
+			$twitter_url = !empty($instance['twitter_url']) ? $instance['twitter_url'] : '';
+			$instagram_url = !empty($instance['instagram_url']) ? $instance['instagram_url'] : '';
+			$pinterest_url = !empty($instance['pinterest_url']) ? $instance['pinterest_url'] : '';
+			$googleplus_url = !empty($instance['googleplus_url']) ? $instance['googleplus_url'] : '';
 			?>
 			<p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', THEMENAME ); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
@@ -76,6 +127,22 @@
 
 			<p><label for="<?php echo $this->get_field_id( 'about_description' ); ?>"><?php _e( 'About Description', THEMENAME ); ?></label>
 			<textarea class="widefat" id="<?php echo $this->get_field_id( 'about_description' ); ?>" name="<?php echo $this->get_field_name( 'about_description' ); ?>"><?php echo $about_description; ?></textarea> </p>
+
+			<p><label for="<?php echo $this->get_field_id( 'facebook_url' ); ?>"><?php _e( 'Facebook Url', THEMENAME ); ?></label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'facebook_url' ); ?>" name="<?php echo $this->get_field_name( 'facebook_url' ); ?>" type="text" value="<?php echo $facebook_url; ?>" /></p>
+
+			<p><label for="<?php echo $this->get_field_id( 'twitter_url' ); ?>"><?php _e( 'Twitter Url', THEMENAME ); ?></label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'twitter_url' ); ?>" name="<?php echo $this->get_field_name( 'twitter_url' ); ?>" type="text" value="<?php echo $twitter_url; ?>" /></p>
+
+			<p><label for="<?php echo $this->get_field_id( 'pinterest_url' ); ?>"><?php _e( 'Pinterest Url', THEMENAME ); ?></label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'pinterest_url' ); ?>" name="<?php echo $this->get_field_name( 'pinterest_url' ); ?>" type="text" value="<?php echo $pinterest_url; ?>" /></p>
+
+			<p><label for="<?php echo $this->get_field_id( 'instagram_url' ); ?>"><?php _e( 'instagram Url', THEMENAME ); ?></label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'instagram_url' ); ?>" name="<?php echo $this->get_field_name( 'instagram_url' ); ?>" type="text" value="<?php echo $instagram_url; ?>" /></p>
+
+			<p><label for="<?php echo $this->get_field_id( 'googleplus_url' ); ?>"><?php _e( 'Google Plus Url', THEMENAME ); ?></label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'googleplus_url' ); ?>" name="<?php echo $this->get_field_name( 'googleplus_url' ); ?>" type="text" value="<?php echo $googleplus_url; ?>" /></p>
+			
 			<?php
 		}
 
@@ -87,6 +154,11 @@
 			$instance['image_url'] = strip_tags($new_instance['image_url']);
 			$instance['about_title'] = strip_tags($new_instance['about_title']);
 			$instance['about_description'] = strip_tags($new_instance['about_description']);
+			$instance['facebook_url'] = strip_tags($new_instance['facebook_url']);
+			$instance['twitter_url'] = strip_tags($new_instance['twitter_url']);
+			$instance['instagram_url'] = strip_tags($new_instance['instagram_url']);
+			$instance['pinterest_url'] = strip_tags($new_instance['pinterest_url']);
+			$instance['googleplus_url'] = strip_tags($new_instance['googleplus_url']);
 
 			$alloptions = wp_cache_get( 'alloptions', 'options' );
 			if ( isset($alloptions['wae_about_widget']) )

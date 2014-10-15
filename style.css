@@ -922,6 +922,37 @@ li.wae-recent-comments > a > p {
 .widget h4 {	
 	font-size: 0.875rem;
 }
+
+.widget.wae_about_widget ul.about-social-media {
+	margin-left: 0px;
+}
+.widget.wae_about_widget ul.about-social-media > li {
+	list-style-type: none;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.widget.wae_about_widget ul.about-social-media > li > a {
+	width: 35px;
+	height: 35px;
+	line-height: 35px;
+	font-size: 1.25rem;
+	border-radius: 24px;	
+	text-align: center;
+	vertical-align: middle;
+	color: #bdbdbd;
+	border: 1px solid #bdbdbd;
+	display: block;
+	-webkit-transition: background 0.5s ease-in-out, border 0.5s ease-in-out;
+	-moz-transition: background 0.5s ease-in-out, border 0.5s ease-in-out;
+	-o-transition: background 0.5s ease-in-out, border 0.5s ease-in-out;
+	transition: background 0.5s ease-in-out, border 0.5s ease-in-out;	
+}
+.widget.wae_about_widget ul.about-social-media > li > a:hover {
+	background: #009688;
+	color: #ffffff;
+	border-color: #009688;
+}
 /* End WAE About Widget */
 
 /* WAE Recent Posts */
